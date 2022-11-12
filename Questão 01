@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define MAX 100
+
+int main()
+  {
+  float v[15], maior, menor;
+  srand(time(NULL));
+  for(int i = 0; i <= 15; i++)
+    {
+    v[i] = rand() % MAX;
+    if(i == 0)
+      {
+      maior = v[0];
+      menor = v[0];
+      }
+      maior = maior < v[i] ? v[i] : maior;
+      menor = menor > v[i] ? v[i] : menor;
+    printf("Elemento %d = %.2f\n", i, v[i]);
+    }
+  printf("Maior = %.2f\nMenor = %.2f\nSoma = %.2f",maior, menor, maior + menor);
+  return 0;
+  }
