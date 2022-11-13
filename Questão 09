@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAM 3
+#define MAX 100
+int main()
+  {
+  int m[TAM][TAM], i;
+  srand(time(NULL));
+  for(i = 0; i < TAM; i++)
+    {
+    for(int k = 0; k < TAM; k++)
+      {
+      m[i][k] = rand() % MAX; 
+      }
+    }
+  printf("{\n");
+  for(i = 0; i < TAM; i++)
+    {
+    for(int k = 0; k < TAM; k++)
+      {
+      printf("%d ", m[i][k]); 
+      }
+    puts("");
+    }
+  puts("}");
+  puts("Diagonal princiapal:");
+  for(i = 0; i < TAM; i++)
+    {
+    for(int k = 0; k < TAM; k++)
+      {
+      if(i == k)
+        {
+        printf("%d ", m[i][k]); 
+        }
+      }
+    }
+  return 0;
+  }
