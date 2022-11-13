@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAM 10
+#define MAX 100
+
+int main()
+  {
+  int m[TAM][TAM], i, x, cont = 0;
+  srand(time(NULL));
+  puts("Digite o valor");
+  scanf("%d", &x);
+  for(i = 0; i < TAM; i++)
+    {
+    for(int k = 0; k < TAM; k++)
+      {
+      m[i][k] = rand() % MAX;
+      }
+    }
+  printf("{\n");
+
+  for(i = 0; i < TAM; i++)
+    {
+    for(int k = 0; k < TAM; k++)
+      {
+      printf("%d ", m[i][k]);
+      cont = x == m[i][k] ? cont + 1 : cont; 
+      }
+    puts("");
+    }
+  printf("}\nx = %d\nnumero de vezes = %d",x, cont);  
+  return 0;
+  }
