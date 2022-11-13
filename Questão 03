@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() 
+  {
+  int i;
+  char s[100];
+  puts("Digite uma frase");
+  fgets (s, 100 , stdin);
+  for(i = 0; i < 100; i++)
+    {
+    if(s[i] == '\0')
+      {
+      break;
+      }
+    }
+  printf("%d caracteres digitados\n", i);
+  return 0;
+  }
+  
