@@ -1,0 +1,85 @@
+/*#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAM 100
+
+int main()
+  {
+  int i, v[TAM], aux, INI, MAX;
+    
+  srand(time(NULL));
+    
+  puts("Digite o intervalo");
+  scanf("%d%d", &INI, &MAX);
+    
+  puts("\nVetor não ordenado\n");
+  
+  for(i = 0; i < TAM; i++)
+    {
+    v[i] = (rand() % (MAX - INI)) + INI;
+    printf("%d ", v[i]);
+    }    
+    
+  for(i = 0; i < TAM - 1; i++)
+    {
+    for(int k = i + 1; k < TAM; k++)
+      {
+      if(v[k] < v[i])
+        {
+        aux = v[i];
+        v[i] = v[k];
+        v[k] = aux;
+        }
+      }
+    }
+    
+  puts("\n\nVetor ordenado\n");
+    
+    for(i = 0; i < TAM; i++)
+    {
+    printf("%d ", v[i]); 
+    }
+    
+  return 0;
+  }
+  */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAM 100
+
+int main()
+  {
+  int i, v[TAM], aux, INI, MAX;    
+  srand(time(NULL));    
+  puts("Digite o intervalo");
+  scanf("%d%d", &INI, &MAX);   
+  puts("\nVetor não ordenado\n");   
+  for(i = 0; i < TAM; i++)
+    {
+    v[i] = (rand() % (MAX - INI)) + INI;
+    printf("%d ", v[i]);
+    }   
+  for(i = 0; i < TAM; i++)
+    {
+    for(int k = 0; k < TAM -1; k++)
+      {
+      if(v[k + 1] < v[k])
+        {
+        aux = v[k];
+        v[k] = v[k + 1];
+        v[k + 1] = aux;
+        }
+      }
+    }    
+  puts("\n\nVetor ordenado\n");
+  for(i = 0; i < TAM; i++)
+    {
+    printf("%d ", v[i]); 
+    }    
+  return 0;
+  }
+  
