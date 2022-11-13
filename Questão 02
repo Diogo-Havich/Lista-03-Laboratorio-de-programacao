@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() 
+  {
+  int i;
+  char s[100], c;
+  puts("Digite uma frase");
+  fgets (s, 100 , stdin);
+  puts("Digite a letra");
+  scanf("%c", &c);
+  for(i = 0; i < 100; i++)
+    {
+    i = c == s[i] ? 100 : i;
+    }   
+  i == 101 ? printf("A letra digitada está na string\n") : 
+  printf("A letra digitada não está na string\n");
+  return 0;
+  }
+  
