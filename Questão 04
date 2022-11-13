@@ -1,3 +1,19 @@
+/*#include <stdio.h>
+#include <string.h>
+
+#define MAX 100
+
+int main()
+  {
+  char s1[MAX], s2[MAX];
+  puts("Digite a primeira frase");
+  fgets(s1, MAX, stdin);
+  puts("Digite a segunda frase");
+  fgets(s2, MAX, stdin);
+  strcmp(s1, s2) ? printf("As frases não são iguais\n") : printf("As frases são iguais\n");
+  return 0;
+  }*/
+  
 #include <stdio.h>
 #include <string.h>
 
